@@ -1,13 +1,12 @@
-FROM rocker/rstudio:4.4.2
+FROM rocker/verse:4.4.2
 
 # R packages
-RUN R -e "install.packages(c('renv', 'pak'))"
+RUN R -e "install.packages(c('renv'))"
 
 # Python
 RUN apt update && apt install -y python3 python3-venv python3-pip
 RUN python3 -m venv /home/rstudio/.venv && \
-    /home/rstudio/.venv/bin/pip install --upgrade pip && \
-    /home/rstudio/.venv/bin/pip install jupyter dvc dvc-gdrive
+    /home/rstudio/.venv/bin/pip install --upgrade pip
 
 # Quarto
 ENV QUARTO_MINOR_VERSION=1.6
