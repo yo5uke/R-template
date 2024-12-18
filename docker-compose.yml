@@ -1,0 +1,9 @@
+services:
+  rstudio:
+    build:
+      context: .
+    environment:
+      - DISABLE_AUTH=true
+      - TZ=Asia/Tokyo
+    volumes:
+      - .:/home/rstudio/work

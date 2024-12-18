@@ -1,0 +1,17 @@
+{
+  "name": "${localWorkspaceFolderBasename}",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "rstudio",
+  "remoteUser": "rstudio",
+  "extensions": [
+    "REditorSupport.r",
+    "quarto.quarto",
+    "James-Yu.latex-workshop",
+    "janisdd.vscode-edit-csv",
+    "GitHub.copilot",
+    "GitHub.vscode-pull-request-github"
+  ],
+  "forwardPorts": [8787],
+  "workspaceFolder": "/home/rstudio/work",
+  "shutdownAction": "stopCompose"
+}
