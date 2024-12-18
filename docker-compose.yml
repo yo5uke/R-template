@@ -7,3 +7,14 @@ services:
       - TZ=Asia/Tokyo
     volumes:
       - .:/home/rstudio/work
+      - cache:/home/rstudio/.cache
+      - venv:/home/rstudio/.venv
+      - texlive:/usr/local/texlive
+
+volumes:
+  cache:
+    external: true
+  venv:
+    external: true
+  texlive:
+    external: true
