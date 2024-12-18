@@ -9,7 +9,7 @@ services:
       - .:/home/rstudio/work
       - cache:/home/rstudio/.cache
       - venv:/home/rstudio/.venv
-      - texlive:/usr/local/texlive
+      - texlive:/home/rstudio/.texlive
 
 volumes:
   cache:
