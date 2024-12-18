@@ -9,6 +9,7 @@ RUN apt update && apt install -y python3 python3-venv python3-pip && \
     rm -rf /var/lib/apt/lists/*
 RUN python3 -m venv /home/rstudio/.venv && \
     /home/rstudio/.venv/bin/pip install --upgrade pip
+ENV PATH="/home/rstudio/.venv/bin:$PATH"
 
 # Quarto
 ENV QUARTO_MINOR_VERSION=1.6
