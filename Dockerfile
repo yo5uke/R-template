@@ -4,7 +4,9 @@ FROM rocker/verse:4.4.2
 RUN R -e "install.packages(c('renv'))"
 
 # Python
-RUN apt update && apt install -y python3 python3-venv python3-pip
+RUN apt update && apt install -y python3 python3-venv python3-pip && \
+    apt clean && \
+    rm -rf /var/lib/apt/lists/*
 RUN python3 -m venv /home/rstudio/.venv && \
     /home/rstudio/.venv/bin/pip install --upgrade pip
 
