@@ -9,12 +9,15 @@ services:
       - .:/home/rstudio/work
       - cache:/home/rstudio/.cache
       - venv:/home/rstudio/.venv
-      - texlive:/home/rstudio/.texlive
+      - TinyTeX:/home/rstudio/.TinyTeX
+      - fonts:/usr/share/fonts
 
 volumes:
   cache:
     external: true
   venv:
     external: true
-  texlive:
+  TinyTeX:
+    external: true
+  fonts:
     external: true

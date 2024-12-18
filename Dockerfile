@@ -4,7 +4,8 @@ FROM rocker/verse:4.4.2
 RUN R -e "install.packages(c('renv'))"
 
 # Python
-RUN apt update && apt install -y python3 python3-venv python3-pip && \
+RUN apt update && apt install -y \
+    python3 python3-venv python3-pip && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
 RUN python3 -m venv /home/rstudio/.venv && \
@@ -23,3 +24,6 @@ RUN wget "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_M
 COPY --chown=rstudio:rstudio /.rstudio/rstudio-prefs.json /home/rstudio/.config/rstudio/rstudio-prefs.json
 COPY --chown=rstudio:rstudio /.rstudio/rsession.conf /etc/rstudio/rsession.conf
 COPY --chown=rstudio:rstudio /.vscode/_settings.json /home/rstudio/.vscode-server/data/Machine/settings.json
+
+RUN cd /home/rstudio && mkdir .cache .TinyTeX && \
+    chown -R rstudio:rstudio .cache .TinyTeX
