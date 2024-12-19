@@ -1,4 +1,5 @@
 {
+    // Copy from "https://github.com/kazuyanagimoto/dockerR/blob/main/.vscode/_settings.json"
     "latex-workshop.latex.recipes": [
         {
             "name": "tinytex_xelatex",
@@ -220,5 +221,7 @@
         }
     ],
     "r.lsp.promptToInstall": false,
+    
+    // Set Python interpreter
     "python.defaultInterpreterPath": "/home/rstudio/.venv/bin/python"
 }
