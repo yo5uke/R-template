@@ -8,4 +8,5 @@
 ## Dockerfileについて
 
 **GISを使う場合：**`FROM rocker/verse`を`FROM rocker/geospatial`に変更
+
 **Quartoのバージョン変更：**`ENV QUARTO_MINOR_VERSION=1.6 ENV QUARTO_PATCH_VERSION=39`を任意のバージョンに変更
