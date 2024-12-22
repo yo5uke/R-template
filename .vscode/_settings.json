@@ -221,6 +221,7 @@
         }
     ],
     "r.lsp.promptToInstall": false,
+    "editor.tabSize": 2,
     
     // Set Python interpreter
     "python.defaultInterpreterPath": "/home/rstudio/.venv/bin/python"
