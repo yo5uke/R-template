@@ -45,10 +45,7 @@
     "default_project_location": "~",
     "source_with_echo": true,
     "rmd_auto_date": true,
-    "document_author": "Yosuke Abe",
     "default_latex_program": "XeLaTeX",
     "use_tinytex": true,
-    "insert_native_pipe_operator": true,
-    "server_editor_font": "Cascadia Code",
-    "server_editor_font_enabled": true
+    "insert_native_pipe_operator": true
 }
