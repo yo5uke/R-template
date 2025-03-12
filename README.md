@@ -10,4 +10,12 @@
 
 **GISを使う場合：**`FROM rocker/verse`を`FROM rocker/geospatial`に変更
 
-**Quartoのバージョン変更：**`ENV QUARTO_MINOR_VERSION=1.6 ENV QUARTO_PATCH_VERSION=39`を任意のバージョンに変更
+**Quartoのバージョン変更：**`ENV QUARTO_MINOR_VERSION=1.6 ENV QUARTO_PATCH_VERSION=42`を任意のバージョンに変更
+
+## ワークスペース名を変えたい場合
+
+**`Dockerfile`:** Pythonについて、`/home/rstudio/work/.venv/`の`work`の部分を任意の名前に変える（3か所）
+
+**`docker-compose.yml`:** `venv:/home/rstudio/work/.venv`の`work`を任意の名前に変える
+
+**`.devcontainer/devcontainer.json`:** `"workspaceFolder": "/home/rstudio/work"`の`workを任意の名前に変える

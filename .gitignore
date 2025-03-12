@@ -19,6 +19,9 @@
 # R Environment Variables
 .Renviron
 
+# Virtualenv
+/.venv/
+
 # Quarto
 /.quarto/
 
