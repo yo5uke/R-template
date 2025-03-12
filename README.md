@@ -18,4 +18,4 @@
 
 **`docker-compose.yml`:** `venv:/home/rstudio/work/.venv`の`work`を任意の名前に変える
 
-**`.devcontainer/devcontainer.json`:** `"workspaceFolder": "/home/rstudio/work"`の`workを任意の名前に変える
+**`.devcontainer/devcontainer.json`:** `"workspaceFolder": "/home/rstudio/work"`の`work`を任意の名前に変える
