@@ -12,6 +12,16 @@
 
 **Quartoのバージョン変更：**`ENV QUARTO_MINOR_VERSION=1.6 ENV QUARTO_PATCH_VERSION=42`を任意のバージョンに変更
 
-## ワークスペース名を変えたい場合
+## ワークスペース名の変更方法
 
-**`.devcontainer/devcontainer.json`:** `"workspaceFolder": "/home/rstudio/work"`の`work`を任意の名前に変える
+### 1. `.devcontainer/devcontainer.json` を編集
+
+`"workspaceFolder": "/home/rstudio/work"` の `work` を任意のフォルダ名に変更  
+
+### 2. 開発コンテナを再起動  
+
+**開発コンテナをまだ開いていない場合**  
+- `Ctrl` + `Shift` + `P` を押して、「**コンテナーで再度開く**」を検索・実行  
+
+**開発コンテナをすでに開いている場合**  
+- `Ctrl` + `Shift` + `P` を押して、「**コンテナーのリビルド**」を検索・実行  
