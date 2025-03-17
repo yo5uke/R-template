@@ -8,7 +8,7 @@ services:
     volumes:
       - .:/home/rstudio/work
       - cache:/home/rstudio/.cache
-      - venv:/home/rstudio/work/.venv
+      - venv:/home/rstudio/.venv
       - TinyTeX:/home/rstudio/.TinyTeX
       - fonts:/usr/share/fonts
 

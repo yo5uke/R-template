@@ -1,4 +1,4 @@
-FROM rocker/verse:4.4.2
+FROM rocker/verse:4.4.3
 
 # R packages
 RUN R -e "install.packages(c('renv', 'pak'))"
@@ -8,9 +8,9 @@ RUN apt update && apt install -y \
     python3 python3-venv python3-pip && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
-RUN python3 -m venv /home/rstudio/work/.venv && \
-    /home/rstudio/work/.venv/bin/pip install --upgrade pip
-ENV PATH="/home/rstudio/work/.venv/bin:$PATH"
+RUN python3 -m venv /home/rstudio/.venv && \
+    /home/rstudio/.venv/bin/pip install --upgrade pip
+ENV PATH="/home/rstudio/.venv/bin:$PATH"
 
 # Quarto
 ENV QUARTO_MINOR_VERSION=1.6
